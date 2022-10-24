@@ -1,12 +1,14 @@
 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
-function aclean(arr) {
-  allSets = new Set();
-  for (let i = 0; i < arr.length; i++) {
-     arr[i] = arr[i].toLowerCase();
-    allSets.add(new Set (arr[i]))
-  }
-  console.log(allSets)
-  console.log(allSets[0] == allSets[1])
+function aclean(array) {
+  //this code base on my knowledge
+  let seti = new Set(array);
+  let newseti = new Set();
+  seti.forEach((value,value2,set) => {
+    newseti.add(value.toLowerCase().split('').sort().join(''));
+    return newseti 
+  })
+  console.log(newseti)
 }
 
-alert(aclean(arr)); // "nap,teachers,ear" or "PAN,cheaters,era"
+// alert(aclean(arr)); // "nap,teachers,ear" or "PAN,cheaters,era"
+aclean(arr);

@@ -11,6 +11,7 @@ function groupById(array) {
     return acc;
   }, {});
   return newObj
+  
 }
 
 let usersById = groupById(users);
