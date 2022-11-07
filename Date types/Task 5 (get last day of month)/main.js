@@ -1,7 +1,19 @@
+// function getLastDayOfMonth(year,month){
+//   let date = new Date(year,month);
+//   date.setMonth(date.getMonth() + 1)
+//   date.setDate(date.getDate() - 1)
+//   return date.getDate()
+// }
+// alert( getLastDayOfMonth(2012, 0) ); // 31
+// alert( getLastDayOfMonth(2012, 1) ); // 29
+// alert( getLastDayOfMonth(2013, 1) ); // 28
+
+//javascript.info solution
+
 function getLastDayOfMonth(year,month){
-  let date = new Date(year,month);
-  date.setMonth(date.getMonth() + 1)
-  date.setDate(date.getDate() - 1)
-  console.log(date.getDate())
+  let date = new Date(year,month+1,0);
+  return date.getDate()
 }
-getLastDayOfMonth(2012,1)
+alert( getLastDayOfMonth(2012, 0) ); // 31
+alert( getLastDayOfMonth(2012, 1) ); // 29
+alert( getLastDayOfMonth(2013, 1) ); // 28
